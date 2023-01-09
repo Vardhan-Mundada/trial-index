@@ -1,0 +1,98 @@
+
+.play-body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  /* align-items: center; */
+  /* height: fit-content; */
+  /* width: fit-content; */
+  /* margin: 10px auto; */
+  background-color: rgba(51, 51, 51, 0);
+  overflow: hidden;
+  z-index: 1;
+  overflow-x: visible;
+}
+.play-button {
+  width: 152px;
+  height: 152px;
+  position: relative;
+  cursor: pointer;
+  overflow-x: visible;
+}
+
+.play-backdrop {
+  /* width: 100%; */
+  /* height: 100%; */
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0);
+  opacity: 0;
+  visibility: hidden;
+  overflow-x: visible;
+}
+
+.play-close {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 15px);
+  border: none;
+  outline: none;
+  background: none;
+  opacity: 0;
+  cursor: pointer;
+  overflow-x: visible;
+}
+
+.play-close::before,
+.play-close::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: rotate(45deg);
+  background-color: #fff;
+  overflow-x: visible;
+}
+
+.play-close::after {
+  transform: rotate(-45deg);
+}
+
+.play-circles {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.play-perspective {
+  width: 600px;
+  height: 400px;
+  position: absolute;
+  left: -230px;
+  top: -125px;
+  overflow-x: visible;
+}
+
+.play-triangle {
+  width: 600px;
+  height: 400px;
+  background-color: rgba(255, 255, 255);
+  cursor: pointer;
+  overflow-x: visible;
+}
+
+@media screen and (max-width:480px) {
+  .play-body{
+    margin-top: 5%;
+    margin-left: 5%;
+    width: 90%;
+    height: 28vh; 
+  }
+}
